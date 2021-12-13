@@ -1,17 +1,16 @@
 {
   "username": "postgres",
-  "password": "docker",
+  "password": "ignitepro",
 
-  "name": "default",
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
-  "database": "fin_api",
-  "entities": [
-    "./src/modules/**/entities/*.ts"
-  ],
+  "database": "fin_api_test",
   "migrations": [
     "./src/database/migrations/*.ts"
+  ],
+  "entities": [
+    "./src/modules/*/entities/*.ts"
   ],
   "cli": {
     "migrationsDir": "./src/database/migrations"

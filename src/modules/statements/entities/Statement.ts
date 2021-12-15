@@ -28,6 +28,9 @@ export class Statement {
   @JoinColumn({ name: 'user_id' })
   user: User;
 
+  @Column('uuid')
+  sender_id: string;
+
   @Column()
   description: string;
 

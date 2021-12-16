@@ -38,15 +38,9 @@ class TransferStatementUseCase {
       throw new TransferStatementError.InsufficientFunds();
     }
 
-    await this.statementsRepository.create({
-      user_id: sender_id,
-      type: OperationType.WITHDRAW,
-      amount,
-      description: `Transfered ${amount} to ${receiver_id}`
-    });
-
     const transfer = await this.statementsRepository.create({
       user_id: receiver_id,
+      sender_id,
       type: OperationType.TRANSFER,
       amount,
       description

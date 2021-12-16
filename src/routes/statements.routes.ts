@@ -16,7 +16,7 @@ statementRouter.use(ensureAuthenticated);
 
 statementRouter.get('/balance', getBalanceController.execute);
 statementRouter.post('/deposit', createStatementController.execute);
-statementRouter.post('/transfer/:user_receiver', transferStatementController.handle);
+statementRouter.post('/transfers/:user_receiver', transferStatementController.handle);
 statementRouter.post('/withdraw', createStatementController.execute);
 statementRouter.get('/:statement_id', getStatementOperationController.execute);
 
